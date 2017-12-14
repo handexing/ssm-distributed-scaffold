@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ssm.distributed</groupId>
@@ -224,13 +225,11 @@
 	</dependencies>
 
 	<modules>
-		<module>ssm-facade-user</module>
-		<module>ssm-user-service</module>
-		<module>ssm-web-boss</module>
-    <module>ssm-distributed-model</module>
-    <module>ssm-distributed-api</module>
-    <module>ssm-distributed-service</module>
-    <module>ssm-distributed-web</module>
-  </modules>
+		<module>ssm-distributed-model</module>
+		<module>ssm-distributed-api</module>
+		<module>ssm-distributed-service</module>
+		<module>ssm-distributed-web</module>
+		<module>ssm-distributed-common</module>
+	</modules>
 
 </project>
