@@ -17,12 +17,11 @@
 	<name>ssm-distributed-web</name>
 
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
+		<!-- <dependency>
+			<groupId>com.ssm.distributed.service</groupId>
+			<artifactId>ssm-distributed-service</artifactId>
+			<version>${project.version}</version>
+		</dependency> -->
 	</dependencies>
 
 	<build>

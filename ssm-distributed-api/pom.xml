@@ -13,7 +13,6 @@
 	
 	<groupId>com.ssm.distributed.api</groupId>
 	<artifactId>ssm-distributed-api</artifactId>
-	<packaging>war</packaging>
 	<name>ssm-distributed-api</name>
 
 	<dependencies>

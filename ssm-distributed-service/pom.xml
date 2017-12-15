@@ -13,7 +13,6 @@
 	
 	<groupId>com.ssm.distributed.service</groupId>
 	<artifactId>ssm-distributed-service</artifactId>
-	<packaging>war</packaging>
 	<name>ssm-distributed-service Maven Webapp</name>
 	
 	<dependencies>
