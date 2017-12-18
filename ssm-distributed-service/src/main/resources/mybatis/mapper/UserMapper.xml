@@ -13,7 +13,7 @@
 	</resultMap>
 	
   	<select id="getById" parameterType="long" resultMap="beanMap">
-    	select * from user where id = #{id}
+    	select * from test_user where id = #{id}
   	</select>
   	
 </mapper>
