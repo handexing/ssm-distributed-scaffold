@@ -1,44 +1,78 @@
-[INFO ][20171215 10:08:46,901][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36aa7bc2: startup date [Fri Dec 15 10:08:46 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:08:47,011][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:11:26,631][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36aa7bc2: startup date [Fri Dec 15 10:11:26 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:11:26,680][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:11:55,853][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36aa7bc2: startup date [Fri Dec 15 10:11:55 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:11:55,903][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:19:37,968][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36aa7bc2: startup date [Fri Dec 15 10:19:37 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:19:38,019][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:29:10,315][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7de26db8: startup date [Fri Dec 15 10:29:10 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:29:10,365][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:29:10,549][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
-[INFO ][20171215 10:29:10,690][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
-[WARN ][20171215 10:29:10,723][AbstractApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1101)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:220)
-	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+[INFO ][20171218 10:26:01,589][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:26:01 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:26:01,630][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:26:01,722][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:26:01,943][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:26:02,431][DruidDataSource:638] {dataSource-1} inited
+[WARN ][20171218 10:26:02,724][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [spring/spring-mybatis.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis/mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error registering typeAlias for 'user'. Cause: java.lang.ClassNotFoundException: Cannot find class: com.ssm.distributed.model.User
+[INFO ][20171218 10:26:02,728][DruidDataSource:1288] {dataSource-1} closed
+[INFO ][20171218 10:27:11,850][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:27:11 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:27:11,889][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:27:11,984][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:27:12,189][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:27:12,680][DruidDataSource:638] {dataSource-1} inited
+[INFO ][20171218 10:32:47,502][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:32:47 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:32:47,541][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:32:47,694][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:32:47,733][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 10:32:47,787][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 10:32:48,040][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:32:48,041][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[WARN ][20171218 10:32:48,042][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [service.properties] cannot be opened because it does not exist
+[ERROR][20171218 10:32:48,045][DubboProvider:20] == DubboProvider context start error:
+org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [service.properties] cannot be opened because it does not exist
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:148)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:281)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:524)
 	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
 	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
-	at com.ssm.service.TestUserDao.main(TestUserDao.java:11)
+	at com.ssm.service.DubboProvider.main(DubboProvider.java:17)
+Caused by: java.io.FileNotFoundException: class path resource [service.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:154)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:98)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:175)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:156)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:139)
+	... 7 more
+[INFO ][20171218 10:35:28,494][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:35:28 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:35:28,535][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:35:28,699][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:35:28,738][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 10:35:28,767][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 10:35:28,951][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:35:28,952][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[WARN ][20171218 10:35:28,974][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+[ERROR][20171218 10:35:28,976][DubboProvider:20] == DubboProvider context start error:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1110)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:223)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:702)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:527)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.service.DubboProvider.main(DubboProvider.java:17)
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1094)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1102)
 	... 13 more
 Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
-	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.<clinit>(ReflectiveAspectJAdvisorFactory.java:74)
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.<clinit>(ReflectiveAspectJAdvisorFactory.java:76)
 	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.<init>(AnnotationAwareAspectJAutoProxyCreator.java:53)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142)
 	... 15 more
 Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Around
 	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
@@ -46,140 +80,361 @@ Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Around
 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
 	... 22 more
-[INFO ][20171215 10:30:06,326][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7de26db8: startup date [Fri Dec 15 10:30:06 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:30:06,369][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:30:06,546][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
-[INFO ][20171215 10:30:06,672][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
-[INFO ][20171215 10:30:08,152][DruidDataSource:638] {dataSource-1} inited
-[WARN ][20171215 10:30:08,154][AbstractApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring/spring-mybatis.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to decrypt.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+[INFO ][20171218 10:35:54,258][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:35:54 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:35:54,299][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:35:54,441][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:35:54,478][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 10:35:54,514][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 10:35:54,671][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:35:54,672][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[INFO ][20171218 10:35:55,058][DruidDataSource:638] {dataSource-1} inited
+[WARN ][20171218 10:35:55,432][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wusc.edu.facade.user.service.PmsUserFacade': Cannot resolve reference to bean 'pmsUserFacade' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'pmsUserFacade' available
+[INFO ][20171218 10:35:55,436][DruidDataSource:1288] {dataSource-1} closed
+[ERROR][20171218 10:35:55,439][DubboProvider:20] == DubboProvider context start error:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'wusc.edu.facade.user.service.PmsUserFacade': Cannot resolve reference to bean 'pmsUserFacade' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'pmsUserFacade' available
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
 	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
 	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
-	at com.ssm.service.TestUserDao.main(TestUserDao.java:11)
-Caused by: java.lang.IllegalArgumentException: Failed to decrypt.
-	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:211)
-	at com.alibaba.druid.filter.config.ConfigFilter.init(ConfigFilter.java:123)
-	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:511)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
-	... 12 more
-Caused by: javax.crypto.BadPaddingException: Decryption error
-	at sun.security.rsa.RSAPadding.unpadV15(RSAPadding.java:380)
-	at sun.security.rsa.RSAPadding.unpad(RSAPadding.java:291)
-	at com.sun.crypto.provider.RSACipher.doFinal(RSACipher.java:356)
-	at com.sun.crypto.provider.RSACipher.engineDoFinal(RSACipher.java:389)
-	at javax.crypto.Cipher.doFinal(Cipher.java:2165)
-	at com.alibaba.druid.filter.config.ConfigTools.decrypt(ConfigTools.java:147)
-	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:203)
-	... 21 more
-[INFO ][20171215 10:31:29,964][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7de26db8: startup date [Fri Dec 15 10:31:29 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:31:30,008][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:31:30,195][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
-[INFO ][20171215 10:31:30,812][DruidDataSource:638] {dataSource-1} inited
-[WARN ][20171215 10:31:30,814][AbstractApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring/spring-mybatis.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to decrypt.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at com.ssm.service.DubboProvider.main(DubboProvider.java:17)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'pmsUserFacade' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:680)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1183)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 15 more
+[INFO ][20171218 10:38:10,662][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:38:10 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:38:10,705][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:38:10,885][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:38:10,926][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[ERROR][20171218 10:38:10,978][DubboProvider:20] == DubboProvider context start error:
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from relative location [dubbo-provider.xml]
+Offending resource: class path resource [spring/spring-context.xml]; nested exception is org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 19 in XML document from class path resource [spring/dubbo-provider.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 19; columnNumber: 73; 与元素类型 "dubbo:service" 相关联的属性 "ref" 应有左引号。
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:70)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:259)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:184)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:169)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:142)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:94)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:508)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:392)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:127)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:93)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:613)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:514)
 	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
 	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
-	at com.ssm.service.TestUserDao.main(TestUserDao.java:11)
-Caused by: java.lang.IllegalArgumentException: Failed to decrypt.
-	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:211)
-	at com.alibaba.druid.filter.config.ConfigFilter.init(ConfigFilter.java:123)
-	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:511)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
-	... 12 more
-Caused by: javax.crypto.BadPaddingException: Decryption error
-	at sun.security.rsa.RSAPadding.unpadV15(RSAPadding.java:380)
-	at sun.security.rsa.RSAPadding.unpad(RSAPadding.java:291)
-	at com.sun.crypto.provider.RSACipher.doFinal(RSACipher.java:356)
-	at com.sun.crypto.provider.RSACipher.engineDoFinal(RSACipher.java:389)
-	at javax.crypto.Cipher.doFinal(Cipher.java:2165)
-	at com.alibaba.druid.filter.config.ConfigTools.decrypt(ConfigTools.java:147)
-	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:203)
-	... 21 more
-[INFO ][20171215 10:35:20,603][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7de26db8: startup date [Fri Dec 15 10:35:20 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:35:20,647][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:35:20,818][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
-[INFO ][20171215 10:35:20,953][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
-[INFO ][20171215 10:35:21,432][DruidDataSource:638] {dataSource-1} inited
-[WARN ][20171215 10:35:21,434][AbstractApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring/spring-mybatis.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to decrypt.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at com.ssm.service.DubboProvider.main(DubboProvider.java:17)
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 19 in XML document from class path resource [spring/dubbo-provider.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 19; columnNumber: 73; 与元素类型 "dubbo:service" 相关联的属性 "ref" 应有左引号。
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:243)
+	... 20 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 19; columnNumber: 73; 与元素类型 "dubbo:service" 相关联的属性 "ref" 应有左引号。
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.scanAttributeValue(XMLScanner.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanAttribute(XMLNSDocumentScannerImpl.java:447)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:250)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:841)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 23 more
+[INFO ][20171218 10:38:59,552][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:38:59 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:38:59,591][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:38:59,763][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:38:59,803][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 10:38:59,841][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 10:38:59,997][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:38:59,997][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[INFO ][20171218 10:39:00,434][DruidDataSource:638] {dataSource-1} inited
+[WARN ][20171218 10:39:00,804][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ssm.distributed.api.service.UserDao': Cannot resolve reference to bean 'userDao' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+[INFO ][20171218 10:39:00,807][DruidDataSource:1288] {dataSource-1} closed
+[ERROR][20171218 10:39:00,809][DubboProvider:20] == DubboProvider context start error:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ssm.distributed.api.service.UserDao': Cannot resolve reference to bean 'userDao' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
 	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
 	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
-	at com.ssm.service.TestUserDao.main(TestUserDao.java:11)
-Caused by: java.lang.IllegalArgumentException: Failed to decrypt.
-	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:211)
-	at com.alibaba.druid.filter.config.ConfigFilter.init(ConfigFilter.java:123)
-	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:511)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
-	... 12 more
-Caused by: javax.crypto.BadPaddingException: Decryption error
-	at sun.security.rsa.RSAPadding.unpadV15(RSAPadding.java:380)
-	at sun.security.rsa.RSAPadding.unpad(RSAPadding.java:291)
-	at com.sun.crypto.provider.RSACipher.doFinal(RSACipher.java:356)
-	at com.sun.crypto.provider.RSACipher.engineDoFinal(RSACipher.java:389)
-	at javax.crypto.Cipher.doFinal(Cipher.java:2165)
-	at com.alibaba.druid.filter.config.ConfigTools.decrypt(ConfigTools.java:147)
-	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:203)
-	... 21 more
-[INFO ][20171215 10:56:32,825][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Fri Dec 15 10:56:32 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:56:32,870][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:56:32,968][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
-[INFO ][20171215 10:56:33,216][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
-[INFO ][20171215 10:56:33,790][DruidDataSource:638] {dataSource-1} inited
-[INFO ][20171215 10:59:04,631][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Fri Dec 15 10:59:04 CST 2017]; root of context hierarchy
-[INFO ][20171215 10:59:04,676][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 10:59:04,774][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
-[INFO ][20171215 10:59:05,008][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
-[INFO ][20171215 10:59:05,447][DruidDataSource:638] {dataSource-1} inited
-[INFO ][20171215 14:23:57,949][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Fri Dec 15 14:23:57 CST 2017]; root of context hierarchy
-[INFO ][20171215 14:23:57,993][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
-[INFO ][20171215 14:23:58,091][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
-[INFO ][20171215 14:23:58,326][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
-[INFO ][20171215 14:23:58,772][DruidDataSource:638] {dataSource-1} inited
+	at com.ssm.service.DubboProvider.main(DubboProvider.java:17)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:680)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1183)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 15 more
+[INFO ][20171218 10:39:27,032][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:39:27 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:39:27,075][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:39:27,254][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:39:27,293][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 10:39:27,334][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 10:39:27,502][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:39:27,503][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[INFO ][20171218 10:39:28,046][DruidDataSource:638] {dataSource-1} inited
+[WARN ][20171218 10:39:28,411][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ssm.distributed.api.service.UserDao': Cannot resolve reference to bean 'userDao' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+[INFO ][20171218 10:39:28,414][DruidDataSource:1288] {dataSource-1} closed
+[ERROR][20171218 10:39:28,417][DubboProvider:20] == DubboProvider context start error:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ssm.distributed.api.service.UserDao': Cannot resolve reference to bean 'userDao' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.service.DubboProvider.main(DubboProvider.java:17)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:680)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1183)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 15 more
+[INFO ][20171218 10:42:18,267][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:42:18 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:42:18,308][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:42:18,489][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:42:18,531][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 10:42:18,564][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 10:42:18,725][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:42:18,726][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[INFO ][20171218 10:42:19,212][DruidDataSource:638] {dataSource-1} inited
+[WARN ][20171218 10:42:19,651][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ssm.distributed.api.service.UserDao': Cannot resolve reference to bean 'userDao' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+[INFO ][20171218 10:42:19,656][DruidDataSource:1288] {dataSource-1} closed
+[ERROR][20171218 10:42:19,659][DubboProvider:20] == DubboProvider context start error:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.ssm.distributed.api.service.UserDao': Cannot resolve reference to bean 'userDao' while setting bean property 'ref'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1231)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.service.DubboProvider.main(DubboProvider.java:17)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'userDao' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:680)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1183)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 15 more
+[INFO ][20171218 10:43:52,325][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:43:52 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:43:52,367][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:43:52,550][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:43:52,586][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 10:43:52,621][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 10:43:52,767][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:43:52,768][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[INFO ][20171218 10:43:53,224][DruidDataSource:638] {dataSource-1} inited
+[INFO ][20171218 10:43:53,666][ServiceBean:107]  [DUBBO] The service ready on spring started. service: com.ssm.distributed.api.service.UserDao, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:43:53,840][ServiceConfig:510]  [DUBBO] Export dubbo service com.ssm.distributed.api.service.UserDao to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:43:53,841][ServiceConfig:470]  [DUBBO] Export dubbo service com.ssm.distributed.api.service.UserDao to url dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=2076&side=provider&timestamp=1513565033689, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:43:53,841][ServiceConfig:481]  [DUBBO] Register dubbo service com.ssm.distributed.api.service.UserDao url dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=2076&side=provider&timestamp=1513565033689 to registry registry://192.168.172.137:2181/com.alibaba.dubbo.registry.RegistryService?application=gw-service-user&dubbo=2.5.3&pid=2076&registry=zookeeper&timestamp=1513565033676, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:43:54,183][AbstractServer:69]  [DUBBO] Start NettyServer bind /0.0.0.0:2181, export /192.168.172.1:2181, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:43:54,211][ZkEventThread:65] Starting ZkClient event thread.
+[INFO ][20171218 10:43:58,722][Environment:100] Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+[INFO ][20171218 10:43:58,722][Environment:100] Client environment:host.name=handx
+[INFO ][20171218 10:43:58,723][Environment:100] Client environment:java.version=1.8.0_144
+[INFO ][20171218 10:43:58,723][Environment:100] Client environment:java.vendor=Oracle Corporation
+[INFO ][20171218 10:43:58,723][Environment:100] Client environment:java.home=D:\soft\Java\jdk1.8.0_144\jre
+[INFO ][20171218 10:43:58,723][Environment:100] Client environment:java.class.path=D:\work\ssm-distributed-scaffold\ssm-distributed-service\target\test-classes;D:\work\ssm-distributed-scaffold\ssm-distributed-service\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-common\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-api\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-common-config\target\classes;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-core\4.3.4.RELEASE\spring-core-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-web\4.3.4.RELEASE\spring-web-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-beans\4.3.4.RELEASE\spring-beans-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-context\4.3.4.RELEASE\spring-context-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-oxm\4.3.4.RELEASE\spring-oxm-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-tx\4.3.4.RELEASE\spring-tx-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-jdbc\4.3.4.RELEASE\spring-jdbc-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-webmvc\4.3.4.RELEASE\spring-webmvc-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-expression\4.3.4.RELEASE\spring-expression-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-aop\4.3.4.RELEASE\spring-aop-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-context-support\4.3.4.RELEASE\spring-context-support-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-test\4.3.4.RELEASE\spring-test-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\mybatis\mybatis\3.4.2\mybatis-3.4.2.jar;D:\soft\apache-maven-3.5.0\repository\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;D:\soft\apache-maven-3.5.0\repository\com\github\pagehelper\pagehelper\4.1.4\pagehelper-4.1.4.jar;D:\soft\apache-maven-3.5.0\repository\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;D:\soft\apache-maven-3.5.0\repository\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar;D:\soft\apache-maven-3.5.0\repository\junit\junit\4.11\junit-4.11.jar;D:\soft\apache-maven-3.5.0\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\druid\1.0.2\druid-1.0.2.jar;D:\soft\apache-maven-3.5.0\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;D:\soft\apache-maven-3.5.0\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-core\2.4.3\jackson-core-2.4.3.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-databind\2.4.3\jackson-databind-2.4.3.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.0\jackson-annotations-2.4.0.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\fastjson\1.2.4\fastjson-1.2.4.jar;D:\soft\apache-maven-3.5.0\repository\commons-beanutils\commons-beanutils\1.8.3\commons-beanutils-1.8.3.jar;D:\soft\apache-maven-3.5.0\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;D:\soft\apache-maven-3.5.0\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;D:\soft\apache-maven-3.5.0\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\soft\apache-maven-3.5.0\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;D:\soft\apache-maven-3.5.0\repository\commons-lang\commons-lang\2.3\commons-lang-2.3.jar;D:\soft\apache-maven-3.5.0\repository\log4j\log4j\1.2.9\log4j-1.2.9.jar;D:\soft\apache-maven-3.5.0\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;D:\soft\apache-maven-3.5.0\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar;D:\soft\apache-maven-3.5.0\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;D:\soft\apache-maven-3.5.0\repository\javax\servlet\jsp\jsp-api\2.2\jsp-api-2.2.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;D:\soft\apache-maven-3.5.0\repository\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;D:\soft\apache-maven-3.5.0\repository\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;D:\soft\apache-maven-3.5.0\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\soft\apache-maven-3.5.0\repository\io\netty\netty\3.10.5.Final\netty-3.10.5.Final.jar;D:\soft\apache-maven-3.5.0\repository\com\101tec\zkclient\0.10\zkclient-0.10.jar;D:\soft\apache-maven-3.5.0\repository\org\apache\zookeeper\zookeeper\3.4.8\zookeeper-3.4.8.jar
+[INFO ][20171218 10:43:58,724][Environment:100] Client environment:java.library.path=D:\soft\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_151/bin/server;C:/Program Files/Java/jre1.8.0_151/bin;C:/Program Files/Java/jre1.8.0_151/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\soft\Java\jdk1.8.0_144\bin;D:\soft\apache-ant-1.9.9\bin;D:\soft\apache-maven-3.5.0\bin;D:\soft\Git\cmd;D:\soft\svn\bin;D:\soft\mysql\bin;C:\Users\handx\AppData\Local\Microsoft\WindowsApps;;D:\soft\eclipse;;.
+[INFO ][20171218 10:43:58,724][Environment:100] Client environment:java.io.tmpdir=C:\Users\handx\AppData\Local\Temp\
+[INFO ][20171218 10:43:58,725][Environment:100] Client environment:java.compiler=<NA>
+[INFO ][20171218 10:43:58,725][Environment:100] Client environment:os.name=Windows 10
+[INFO ][20171218 10:43:58,725][Environment:100] Client environment:os.arch=amd64
+[INFO ][20171218 10:43:58,726][Environment:100] Client environment:os.version=10.0
+[INFO ][20171218 10:43:58,727][Environment:100] Client environment:user.name=handx
+[INFO ][20171218 10:43:58,727][Environment:100] Client environment:user.home=C:\Users\handx
+[INFO ][20171218 10:43:58,728][Environment:100] Client environment:user.dir=D:\work\ssm-distributed-scaffold\ssm-distributed-service
+[INFO ][20171218 10:43:58,731][ZooKeeper:438] Initiating client connection, connectString=192.168.172.137:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@732f29af
+[INFO ][20171218 10:43:58,795][ZkClient:936] Waiting for keeper state SyncConnected
+[INFO ][20171218 10:43:58,807][ClientCnxn$SendThread:1032] Opening socket connection to server 192.168.172.137/192.168.172.137:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO ][20171218 10:43:58,809][ClientCnxn$SendThread:876] Socket connection established to 192.168.172.137/192.168.172.137:2181, initiating session
+[INFO ][20171218 10:43:58,858][ClientCnxn$SendThread:1299] Session establishment complete on server 192.168.172.137/192.168.172.137:2181, sessionid = 0x10000039a530000, negotiated timeout = 30000
+[INFO ][20171218 10:43:58,861][ZkClient:713] zookeeper state changed (SyncConnected)
+[INFO ][20171218 10:43:58,863][AbstractRegistry:302]  [DUBBO] Register: dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=2076&side=provider&timestamp=1513565033689, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:43:58,905][AbstractRegistry:325]  [DUBBO] Subscribe: provider://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=2076&side=provider&timestamp=1513565033689, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:43:58,941][AbstractRegistry:422]  [DUBBO] Notify urls for subscribe url provider://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=2076&side=provider&timestamp=1513565033689, urls: [empty://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=2076&side=provider&timestamp=1513565033689], dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:00,060][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 10:59:00 CST 2017]; root of context hierarchy
+[INFO ][20171218 10:59:00,102][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 10:59:00,283][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 10:59:00,320][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 10:59:00,362][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 10:59:00,535][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 10:59:00,536][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[INFO ][20171218 10:59:01,034][DruidDataSource:638] {dataSource-1} inited
+[INFO ][20171218 10:59:01,441][ServiceBean:107]  [DUBBO] The service ready on spring started. service: com.ssm.distributed.api.service.UserDao, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:01,558][ServiceConfig:510]  [DUBBO] Export dubbo service com.ssm.distributed.api.service.UserDao to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:01,558][ServiceConfig:470]  [DUBBO] Export dubbo service com.ssm.distributed.api.service.UserDao to url dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=13340&side=provider&timestamp=1513565941458, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:01,559][ServiceConfig:481]  [DUBBO] Register dubbo service com.ssm.distributed.api.service.UserDao url dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=13340&side=provider&timestamp=1513565941458 to registry registry://192.168.172.137:2181/com.alibaba.dubbo.registry.RegistryService?application=gw-service-user&dubbo=2.5.3&pid=13340&registry=zookeeper&timestamp=1513565941448, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:01,853][AbstractServer:69]  [DUBBO] Start NettyServer bind /0.0.0.0:2181, export /192.168.172.1:2181, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:01,869][AbstractRegistry:232]  [DUBBO] Load registry store file C:\Users\handx\.dubbo\dubbo-registry-192.168.172.137.cache, data: {com.ssm.distributed.api.service.UserDao=empty://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=2076&side=provider&timestamp=1513565033689}, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:01,879][ZkEventThread:65] Starting ZkClient event thread.
+[INFO ][20171218 10:59:06,395][Environment:100] Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+[INFO ][20171218 10:59:06,396][Environment:100] Client environment:host.name=handx
+[INFO ][20171218 10:59:06,397][Environment:100] Client environment:java.version=1.8.0_144
+[INFO ][20171218 10:59:06,398][Environment:100] Client environment:java.vendor=Oracle Corporation
+[INFO ][20171218 10:59:06,398][Environment:100] Client environment:java.home=D:\soft\Java\jdk1.8.0_144\jre
+[INFO ][20171218 10:59:06,399][Environment:100] Client environment:java.class.path=D:\work\ssm-distributed-scaffold\ssm-distributed-service\target\test-classes;D:\work\ssm-distributed-scaffold\ssm-distributed-service\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-common\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-api\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-common-config\target\classes;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-core\4.3.4.RELEASE\spring-core-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-web\4.3.4.RELEASE\spring-web-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-beans\4.3.4.RELEASE\spring-beans-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-context\4.3.4.RELEASE\spring-context-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-oxm\4.3.4.RELEASE\spring-oxm-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-tx\4.3.4.RELEASE\spring-tx-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-jdbc\4.3.4.RELEASE\spring-jdbc-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-webmvc\4.3.4.RELEASE\spring-webmvc-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-expression\4.3.4.RELEASE\spring-expression-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-aop\4.3.4.RELEASE\spring-aop-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-context-support\4.3.4.RELEASE\spring-context-support-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-test\4.3.4.RELEASE\spring-test-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\mybatis\mybatis\3.4.2\mybatis-3.4.2.jar;D:\soft\apache-maven-3.5.0\repository\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;D:\soft\apache-maven-3.5.0\repository\com\github\pagehelper\pagehelper\4.1.4\pagehelper-4.1.4.jar;D:\soft\apache-maven-3.5.0\repository\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;D:\soft\apache-maven-3.5.0\repository\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar;D:\soft\apache-maven-3.5.0\repository\junit\junit\4.11\junit-4.11.jar;D:\soft\apache-maven-3.5.0\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\druid\1.0.2\druid-1.0.2.jar;D:\soft\apache-maven-3.5.0\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;D:\soft\apache-maven-3.5.0\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-core\2.4.3\jackson-core-2.4.3.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-databind\2.4.3\jackson-databind-2.4.3.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.0\jackson-annotations-2.4.0.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\fastjson\1.2.4\fastjson-1.2.4.jar;D:\soft\apache-maven-3.5.0\repository\commons-beanutils\commons-beanutils\1.8.3\commons-beanutils-1.8.3.jar;D:\soft\apache-maven-3.5.0\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;D:\soft\apache-maven-3.5.0\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;D:\soft\apache-maven-3.5.0\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\soft\apache-maven-3.5.0\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;D:\soft\apache-maven-3.5.0\repository\commons-lang\commons-lang\2.3\commons-lang-2.3.jar;D:\soft\apache-maven-3.5.0\repository\log4j\log4j\1.2.9\log4j-1.2.9.jar;D:\soft\apache-maven-3.5.0\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;D:\soft\apache-maven-3.5.0\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar;D:\soft\apache-maven-3.5.0\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;D:\soft\apache-maven-3.5.0\repository\javax\servlet\jsp\jsp-api\2.2\jsp-api-2.2.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;D:\soft\apache-maven-3.5.0\repository\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;D:\soft\apache-maven-3.5.0\repository\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;D:\soft\apache-maven-3.5.0\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\soft\apache-maven-3.5.0\repository\io\netty\netty\3.10.5.Final\netty-3.10.5.Final.jar;D:\soft\apache-maven-3.5.0\repository\com\101tec\zkclient\0.10\zkclient-0.10.jar;D:\soft\apache-maven-3.5.0\repository\org\apache\zookeeper\zookeeper\3.4.8\zookeeper-3.4.8.jar
+[INFO ][20171218 10:59:06,401][Environment:100] Client environment:java.library.path=D:\soft\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_151/bin/server;C:/Program Files/Java/jre1.8.0_151/bin;C:/Program Files/Java/jre1.8.0_151/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\soft\Java\jdk1.8.0_144\bin;D:\soft\apache-ant-1.9.9\bin;D:\soft\apache-maven-3.5.0\bin;D:\soft\Git\cmd;D:\soft\svn\bin;D:\soft\mysql\bin;C:\Users\handx\AppData\Local\Microsoft\WindowsApps;;D:\soft\eclipse;;.
+[INFO ][20171218 10:59:06,402][Environment:100] Client environment:java.io.tmpdir=C:\Users\handx\AppData\Local\Temp\
+[INFO ][20171218 10:59:06,403][Environment:100] Client environment:java.compiler=<NA>
+[INFO ][20171218 10:59:06,404][Environment:100] Client environment:os.name=Windows 10
+[INFO ][20171218 10:59:06,405][Environment:100] Client environment:os.arch=amd64
+[INFO ][20171218 10:59:06,407][Environment:100] Client environment:os.version=10.0
+[INFO ][20171218 10:59:06,408][Environment:100] Client environment:user.name=handx
+[INFO ][20171218 10:59:06,409][Environment:100] Client environment:user.home=C:\Users\handx
+[INFO ][20171218 10:59:06,410][Environment:100] Client environment:user.dir=D:\work\ssm-distributed-scaffold\ssm-distributed-service
+[INFO ][20171218 10:59:06,414][ZooKeeper:438] Initiating client connection, connectString=192.168.172.137:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@d3957fe
+[INFO ][20171218 10:59:06,441][ZkClient:936] Waiting for keeper state SyncConnected
+[INFO ][20171218 10:59:06,445][ClientCnxn$SendThread:1032] Opening socket connection to server 192.168.172.137/192.168.172.137:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO ][20171218 10:59:06,447][ClientCnxn$SendThread:876] Socket connection established to 192.168.172.137/192.168.172.137:2181, initiating session
+[INFO ][20171218 10:59:06,461][ClientCnxn$SendThread:1299] Session establishment complete on server 192.168.172.137/192.168.172.137:2181, sessionid = 0x10000039a530001, negotiated timeout = 30000
+[INFO ][20171218 10:59:06,463][ZkClient:713] zookeeper state changed (SyncConnected)
+[INFO ][20171218 10:59:06,465][AbstractRegistry:302]  [DUBBO] Register: dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=13340&side=provider&timestamp=1513565941458, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:06,497][AbstractRegistry:325]  [DUBBO] Subscribe: provider://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=13340&side=provider&timestamp=1513565941458, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 10:59:06,524][AbstractRegistry:422]  [DUBBO] Notify urls for subscribe url provider://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=13340&side=provider&timestamp=1513565941458, urls: [empty://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=13340&side=provider&timestamp=1513565941458], dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:24,083][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 11:16:24 CST 2017]; root of context hierarchy
+[INFO ][20171218 11:16:24,123][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 11:16:24,307][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 11:16:24,348][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 11:16:24,389][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 11:16:24,530][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 11:16:24,531][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[INFO ][20171218 11:16:24,991][DruidDataSource:638] {dataSource-1} inited
+[INFO ][20171218 11:16:25,412][ServiceBean:107]  [DUBBO] The service ready on spring started. service: com.ssm.distributed.api.service.UserDao, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:25,510][ServiceConfig:510]  [DUBBO] Export dubbo service com.ssm.distributed.api.service.UserDao to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:25,511][ServiceConfig:470]  [DUBBO] Export dubbo service com.ssm.distributed.api.service.UserDao to url dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=1320&side=provider&timestamp=1513566985428, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:25,511][ServiceConfig:481]  [DUBBO] Register dubbo service com.ssm.distributed.api.service.UserDao url dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=1320&side=provider&timestamp=1513566985428 to registry registry://192.168.172.137:2181/com.alibaba.dubbo.registry.RegistryService?application=ssm-distributed-service&dubbo=2.5.3&pid=1320&registry=zookeeper&timestamp=1513566985419, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:25,850][AbstractServer:69]  [DUBBO] Start NettyServer bind /0.0.0.0:2181, export /192.168.172.1:2181, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:25,873][AbstractRegistry:232]  [DUBBO] Load registry store file C:\Users\handx\.dubbo\dubbo-registry-192.168.172.137.cache, data: {com.ssm.distributed.api.service.UserDao=empty://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=gw-service-user&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=13340&side=provider&timestamp=1513565941458}, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:25,885][ZkEventThread:65] Starting ZkClient event thread.
+[INFO ][20171218 11:16:25,893][Environment:100] Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+[INFO ][20171218 11:16:25,893][Environment:100] Client environment:host.name=handx
+[INFO ][20171218 11:16:25,893][Environment:100] Client environment:java.version=1.8.0_144
+[INFO ][20171218 11:16:25,894][Environment:100] Client environment:java.vendor=Oracle Corporation
+[INFO ][20171218 11:16:25,894][Environment:100] Client environment:java.home=D:\soft\Java\jdk1.8.0_144\jre
+[INFO ][20171218 11:16:25,894][Environment:100] Client environment:java.class.path=D:\work\ssm-distributed-scaffold\ssm-distributed-service\target\test-classes;D:\work\ssm-distributed-scaffold\ssm-distributed-service\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-common\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-api\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-common-config\target\classes;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-core\4.3.4.RELEASE\spring-core-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-web\4.3.4.RELEASE\spring-web-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-beans\4.3.4.RELEASE\spring-beans-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-context\4.3.4.RELEASE\spring-context-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-oxm\4.3.4.RELEASE\spring-oxm-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-tx\4.3.4.RELEASE\spring-tx-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-jdbc\4.3.4.RELEASE\spring-jdbc-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-webmvc\4.3.4.RELEASE\spring-webmvc-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-expression\4.3.4.RELEASE\spring-expression-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-aop\4.3.4.RELEASE\spring-aop-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-context-support\4.3.4.RELEASE\spring-context-support-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-test\4.3.4.RELEASE\spring-test-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\mybatis\mybatis\3.4.2\mybatis-3.4.2.jar;D:\soft\apache-maven-3.5.0\repository\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;D:\soft\apache-maven-3.5.0\repository\com\github\pagehelper\pagehelper\4.1.4\pagehelper-4.1.4.jar;D:\soft\apache-maven-3.5.0\repository\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;D:\soft\apache-maven-3.5.0\repository\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar;D:\soft\apache-maven-3.5.0\repository\junit\junit\4.11\junit-4.11.jar;D:\soft\apache-maven-3.5.0\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\druid\1.0.2\druid-1.0.2.jar;D:\soft\apache-maven-3.5.0\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;D:\soft\apache-maven-3.5.0\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-core\2.4.3\jackson-core-2.4.3.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-databind\2.4.3\jackson-databind-2.4.3.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.0\jackson-annotations-2.4.0.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\fastjson\1.2.4\fastjson-1.2.4.jar;D:\soft\apache-maven-3.5.0\repository\commons-beanutils\commons-beanutils\1.8.3\commons-beanutils-1.8.3.jar;D:\soft\apache-maven-3.5.0\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;D:\soft\apache-maven-3.5.0\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;D:\soft\apache-maven-3.5.0\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\soft\apache-maven-3.5.0\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;D:\soft\apache-maven-3.5.0\repository\commons-lang\commons-lang\2.3\commons-lang-2.3.jar;D:\soft\apache-maven-3.5.0\repository\log4j\log4j\1.2.9\log4j-1.2.9.jar;D:\soft\apache-maven-3.5.0\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;D:\soft\apache-maven-3.5.0\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar;D:\soft\apache-maven-3.5.0\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;D:\soft\apache-maven-3.5.0\repository\javax\servlet\jsp\jsp-api\2.2\jsp-api-2.2.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;D:\soft\apache-maven-3.5.0\repository\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;D:\soft\apache-maven-3.5.0\repository\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;D:\soft\apache-maven-3.5.0\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\soft\apache-maven-3.5.0\repository\io\netty\netty\3.10.5.Final\netty-3.10.5.Final.jar;D:\soft\apache-maven-3.5.0\repository\com\101tec\zkclient\0.10\zkclient-0.10.jar;D:\soft\apache-maven-3.5.0\repository\org\apache\zookeeper\zookeeper\3.4.8\zookeeper-3.4.8.jar
+[INFO ][20171218 11:16:25,895][Environment:100] Client environment:java.library.path=D:\soft\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_151/bin/server;C:/Program Files/Java/jre1.8.0_151/bin;C:/Program Files/Java/jre1.8.0_151/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\soft\Java\jdk1.8.0_144\bin;D:\soft\apache-ant-1.9.9\bin;D:\soft\apache-maven-3.5.0\bin;D:\soft\Git\cmd;D:\soft\svn\bin;D:\soft\mysql\bin;C:\Users\handx\AppData\Local\Microsoft\WindowsApps;;D:\soft\eclipse;;.
+[INFO ][20171218 11:16:25,895][Environment:100] Client environment:java.io.tmpdir=C:\Users\handx\AppData\Local\Temp\
+[INFO ][20171218 11:16:25,895][Environment:100] Client environment:java.compiler=<NA>
+[INFO ][20171218 11:16:25,895][Environment:100] Client environment:os.name=Windows 10
+[INFO ][20171218 11:16:25,896][Environment:100] Client environment:os.arch=amd64
+[INFO ][20171218 11:16:25,896][Environment:100] Client environment:os.version=10.0
+[INFO ][20171218 11:16:25,896][Environment:100] Client environment:user.name=handx
+[INFO ][20171218 11:16:25,897][Environment:100] Client environment:user.home=C:\Users\handx
+[INFO ][20171218 11:16:25,897][Environment:100] Client environment:user.dir=D:\work\ssm-distributed-scaffold\ssm-distributed-service
+[INFO ][20171218 11:16:25,898][ZooKeeper:438] Initiating client connection, connectString=192.168.172.137:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@d3957fe
+[INFO ][20171218 11:16:25,910][ZkClient:936] Waiting for keeper state SyncConnected
+[INFO ][20171218 11:16:25,913][ClientCnxn$SendThread:1032] Opening socket connection to server 192.168.172.137/192.168.172.137:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO ][20171218 11:16:25,914][ClientCnxn$SendThread:876] Socket connection established to 192.168.172.137/192.168.172.137:2181, initiating session
+[INFO ][20171218 11:16:25,926][ClientCnxn$SendThread:1299] Session establishment complete on server 192.168.172.137/192.168.172.137:2181, sessionid = 0x10000039a530002, negotiated timeout = 30000
+[INFO ][20171218 11:16:25,928][ZkClient:713] zookeeper state changed (SyncConnected)
+[INFO ][20171218 11:16:25,929][AbstractRegistry:302]  [DUBBO] Register: dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=1320&side=provider&timestamp=1513566985428, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:25,969][AbstractRegistry:325]  [DUBBO] Subscribe: provider://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=1320&side=provider&timestamp=1513566985428, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:16:26,044][AbstractRegistry:422]  [DUBBO] Notify urls for subscribe url provider://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=1320&side=provider&timestamp=1513566985428, urls: [empty://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=1320&side=provider&timestamp=1513566985428], dubbo version: 2.5.3, current host: 127.0.0.1
+[WARN ][20171218 11:24:46,534][AbstractServer:197]  [DUBBO] All clients has discontected from /192.168.172.1:2181. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:24:46,535][DubboProtocol$1:130]  [DUBBO] disconected from /192.168.172.1:54664,url:dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=1320&side=provider&timestamp=1513566985428, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:43,793][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Mon Dec 18 11:25:43 CST 2017]; root of context hierarchy
+[INFO ][20171218 11:25:43,835][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171218 11:25:44,008][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171218 11:25:44,044][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/dubbo-provider.xml]
+[INFO ][20171218 11:25:44,084][?:?] using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+[INFO ][20171218 11:25:44,233][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171218 11:25:44,234][PropertiesLoaderSupport:172] Loading properties file from class path resource [service.properties]
+[INFO ][20171218 11:25:44,659][DruidDataSource:638] {dataSource-1} inited
+[INFO ][20171218 11:25:45,073][ServiceBean:107]  [DUBBO] The service ready on spring started. service: com.ssm.distributed.api.service.UserDao, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:45,218][ServiceConfig:510]  [DUBBO] Export dubbo service com.ssm.distributed.api.service.UserDao to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:45,219][ServiceConfig:470]  [DUBBO] Export dubbo service com.ssm.distributed.api.service.UserDao to url dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=3228&side=provider&timestamp=1513567545090, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:45,220][ServiceConfig:481]  [DUBBO] Register dubbo service com.ssm.distributed.api.service.UserDao url dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=3228&side=provider&timestamp=1513567545090 to registry registry://192.168.172.137:2181/com.alibaba.dubbo.registry.RegistryService?application=ssm-distributed-service&dubbo=2.5.3&pid=3228&registry=zookeeper&timestamp=1513567545080, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:45,491][AbstractServer:69]  [DUBBO] Start NettyServer bind /0.0.0.0:2181, export /192.168.172.1:2181, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:45,506][AbstractRegistry:232]  [DUBBO] Load registry store file C:\Users\handx\.dubbo\dubbo-registry-192.168.172.137.cache, data: {com.ssm.distributed.api.service.UserDao=empty://192.168.172.1/com.ssm.distributed.api.service.UserDao?application=ssm-distributed-web&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=12368&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513567510660 empty://192.168.172.1/com.ssm.distributed.api.service.UserDao?application=ssm-distributed-web&category=routers&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=12368&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513567510660 empty://192.168.172.1/com.ssm.distributed.api.service.UserDao?application=ssm-distributed-web&category=providers&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=12368&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1513567510660}, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:45,517][ZkEventThread:65] Starting ZkClient event thread.
+[INFO ][20171218 11:25:45,524][Environment:100] Client environment:zookeeper.version=3.4.8--1, built on 02/06/2016 03:18 GMT
+[INFO ][20171218 11:25:45,524][Environment:100] Client environment:host.name=handx
+[INFO ][20171218 11:25:45,524][Environment:100] Client environment:java.version=1.8.0_144
+[INFO ][20171218 11:25:45,524][Environment:100] Client environment:java.vendor=Oracle Corporation
+[INFO ][20171218 11:25:45,525][Environment:100] Client environment:java.home=D:\soft\Java\jdk1.8.0_144\jre
+[INFO ][20171218 11:25:45,525][Environment:100] Client environment:java.class.path=D:\work\ssm-distributed-scaffold\ssm-distributed-service\target\test-classes;D:\work\ssm-distributed-scaffold\ssm-distributed-service\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-common\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-api\target\classes;D:\work\ssm-distributed-scaffold\ssm-distributed-common-config\target\classes;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-core\4.3.4.RELEASE\spring-core-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-web\4.3.4.RELEASE\spring-web-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-beans\4.3.4.RELEASE\spring-beans-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-context\4.3.4.RELEASE\spring-context-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-oxm\4.3.4.RELEASE\spring-oxm-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-tx\4.3.4.RELEASE\spring-tx-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-jdbc\4.3.4.RELEASE\spring-jdbc-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-webmvc\4.3.4.RELEASE\spring-webmvc-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-expression\4.3.4.RELEASE\spring-expression-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-aop\4.3.4.RELEASE\spring-aop-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-context-support\4.3.4.RELEASE\spring-context-support-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\springframework\spring-test\4.3.4.RELEASE\spring-test-4.3.4.RELEASE.jar;D:\soft\apache-maven-3.5.0\repository\org\mybatis\mybatis\3.4.2\mybatis-3.4.2.jar;D:\soft\apache-maven-3.5.0\repository\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;D:\soft\apache-maven-3.5.0\repository\com\github\pagehelper\pagehelper\4.1.4\pagehelper-4.1.4.jar;D:\soft\apache-maven-3.5.0\repository\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;D:\soft\apache-maven-3.5.0\repository\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar;D:\soft\apache-maven-3.5.0\repository\junit\junit\4.11\junit-4.11.jar;D:\soft\apache-maven-3.5.0\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\druid\1.0.2\druid-1.0.2.jar;D:\soft\apache-maven-3.5.0\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;D:\soft\apache-maven-3.5.0\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-core\2.4.3\jackson-core-2.4.3.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-databind\2.4.3\jackson-databind-2.4.3.jar;D:\soft\apache-maven-3.5.0\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.0\jackson-annotations-2.4.0.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\fastjson\1.2.4\fastjson-1.2.4.jar;D:\soft\apache-maven-3.5.0\repository\commons-beanutils\commons-beanutils\1.8.3\commons-beanutils-1.8.3.jar;D:\soft\apache-maven-3.5.0\repository\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;D:\soft\apache-maven-3.5.0\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;D:\soft\apache-maven-3.5.0\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\soft\apache-maven-3.5.0\repository\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar;D:\soft\apache-maven-3.5.0\repository\commons-lang\commons-lang\2.3\commons-lang-2.3.jar;D:\soft\apache-maven-3.5.0\repository\log4j\log4j\1.2.9\log4j-1.2.9.jar;D:\soft\apache-maven-3.5.0\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;D:\soft\apache-maven-3.5.0\repository\org\slf4j\slf4j-log4j12\1.6.6\slf4j-log4j12-1.6.6.jar;D:\soft\apache-maven-3.5.0\repository\javax\servlet\servlet-api\2.5\servlet-api-2.5.jar;D:\soft\apache-maven-3.5.0\repository\javax\servlet\jsp\jsp-api\2.2\jsp-api-2.2.jar;D:\soft\apache-maven-3.5.0\repository\com\alibaba\dubbo\2.5.3\dubbo-2.5.3.jar;D:\soft\apache-maven-3.5.0\repository\org\javassist\javassist\3.15.0-GA\javassist-3.15.0-GA.jar;D:\soft\apache-maven-3.5.0\repository\org\jboss\netty\netty\3.2.5.Final\netty-3.2.5.Final.jar;D:\soft\apache-maven-3.5.0\repository\jline\jline\0.9.94\jline-0.9.94.jar;D:\soft\apache-maven-3.5.0\repository\io\netty\netty\3.10.5.Final\netty-3.10.5.Final.jar;D:\soft\apache-maven-3.5.0\repository\com\101tec\zkclient\0.10\zkclient-0.10.jar;D:\soft\apache-maven-3.5.0\repository\org\apache\zookeeper\zookeeper\3.4.8\zookeeper-3.4.8.jar
+[INFO ][20171218 11:25:45,525][Environment:100] Client environment:java.library.path=D:\soft\Java\jdk1.8.0_144\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_151/bin/server;C:/Program Files/Java/jre1.8.0_151/bin;C:/Program Files/Java/jre1.8.0_151/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\soft\Java\jdk1.8.0_144\bin;D:\soft\apache-ant-1.9.9\bin;D:\soft\apache-maven-3.5.0\bin;D:\soft\Git\cmd;D:\soft\svn\bin;D:\soft\mysql\bin;C:\Users\handx\AppData\Local\Microsoft\WindowsApps;;D:\soft\eclipse;;.
+[INFO ][20171218 11:25:45,526][Environment:100] Client environment:java.io.tmpdir=C:\Users\handx\AppData\Local\Temp\
+[INFO ][20171218 11:25:45,526][Environment:100] Client environment:java.compiler=<NA>
+[INFO ][20171218 11:25:45,526][Environment:100] Client environment:os.name=Windows 10
+[INFO ][20171218 11:25:45,527][Environment:100] Client environment:os.arch=amd64
+[INFO ][20171218 11:25:45,527][Environment:100] Client environment:os.version=10.0
+[INFO ][20171218 11:25:45,527][Environment:100] Client environment:user.name=handx
+[INFO ][20171218 11:25:45,527][Environment:100] Client environment:user.home=C:\Users\handx
+[INFO ][20171218 11:25:45,528][Environment:100] Client environment:user.dir=D:\work\ssm-distributed-scaffold\ssm-distributed-service
+[INFO ][20171218 11:25:45,528][ZooKeeper:438] Initiating client connection, connectString=192.168.172.137:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@299321e2
+[INFO ][20171218 11:25:45,540][ZkClient:936] Waiting for keeper state SyncConnected
+[INFO ][20171218 11:25:45,543][ClientCnxn$SendThread:1032] Opening socket connection to server 192.168.172.137/192.168.172.137:2181. Will not attempt to authenticate using SASL (unknown error)
+[INFO ][20171218 11:25:45,544][ClientCnxn$SendThread:876] Socket connection established to 192.168.172.137/192.168.172.137:2181, initiating session
+[INFO ][20171218 11:25:45,559][ClientCnxn$SendThread:1299] Session establishment complete on server 192.168.172.137/192.168.172.137:2181, sessionid = 0x10000039a530005, negotiated timeout = 30000
+[INFO ][20171218 11:25:45,562][ZkClient:713] zookeeper state changed (SyncConnected)
+[INFO ][20171218 11:25:45,564][AbstractRegistry:302]  [DUBBO] Register: dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=3228&side=provider&timestamp=1513567545090, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:45,598][AbstractRegistry:325]  [DUBBO] Subscribe: provider://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=3228&side=provider&timestamp=1513567545090, dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:25:45,621][AbstractRegistry:422]  [DUBBO] Notify urls for subscribe url provider://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=3228&side=provider&timestamp=1513567545090, urls: [empty://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&category=configurators&check=false&dubbo=2.5.3&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=3228&side=provider&timestamp=1513567545090], dubbo version: 2.5.3, current host: 127.0.0.1
+[WARN ][20171218 11:26:26,309][AbstractServer:197]  [DUBBO] All clients has discontected from /192.168.172.1:2181. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+[INFO ][20171218 11:26:26,309][DubboProtocol$1:130]  [DUBBO] disconected from /192.168.172.1:54791,url:dubbo://192.168.172.1:2181/com.ssm.distributed.api.service.UserDao?anyhost=true&application=ssm-distributed-service&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.ssm.distributed.api.service.UserDao&methods=getById&pid=3228&side=provider&timestamp=1513567545090, dubbo version: 2.5.3, current host: 127.0.0.1

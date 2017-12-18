@@ -17,11 +17,23 @@
 	<name>ssm-distributed-web</name>
 
 	<dependencies>
-		<!-- <dependency>
-			<groupId>com.ssm.distributed.service</groupId>
-			<artifactId>ssm-distributed-service</artifactId>
+		<dependency>
+			<groupId>com.ssm.distributed.common</groupId>
+			<artifactId>ssm-distributed-common</artifactId>
 			<version>${project.version}</version>
-		</dependency> -->
+		</dependency>
+		
+		<dependency>
+			<groupId>com.ssm.distributed</groupId>
+			<artifactId>ssm-distributed-common-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.ssm.distributed.api</groupId>
+			<artifactId>ssm-distributed-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>

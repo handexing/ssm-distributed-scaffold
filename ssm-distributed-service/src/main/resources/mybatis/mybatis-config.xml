@@ -30,7 +30,7 @@
 
 	<!-- 类型别名是为 Java类型命名一个短的名字。 它只和 XML配置有关,只用来减少类完全 限定名的多余部分 -->
 	<typeAliases>
-		<typeAlias alias="user" type="com.ssm.distributed.model.User" />
+		<typeAlias alias="user" type="com.ssm.distributed.api.entity.User" />
 	</typeAliases>
 
 </configuration>

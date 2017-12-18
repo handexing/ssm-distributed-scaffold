@@ -1,0 +1,185 @@
+[INFO ][20171215 10:08:46,901][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36aa7bc2: startup date [Fri Dec 15 10:08:46 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:08:47,011][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:11:26,631][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36aa7bc2: startup date [Fri Dec 15 10:11:26 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:11:26,680][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:11:55,853][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36aa7bc2: startup date [Fri Dec 15 10:11:55 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:11:55,903][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:19:37,968][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36aa7bc2: startup date [Fri Dec 15 10:19:37 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:19:38,019][XmlBeanDefinitionReader:315] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:29:10,315][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7de26db8: startup date [Fri Dec 15 10:29:10 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:29:10,365][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:29:10,549][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171215 10:29:10,690][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[WARN ][20171215 10:29:10,723][AbstractApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1101)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:220)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:465)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.service.TestUserDao.main(TestUserDao.java:11)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1094)
+	... 13 more
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.<clinit>(ReflectiveAspectJAdvisorFactory.java:74)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.<init>(AnnotationAwareAspectJAutoProxyCreator.java:53)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:147)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Around
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 22 more
+[INFO ][20171215 10:30:06,326][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7de26db8: startup date [Fri Dec 15 10:30:06 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:30:06,369][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:30:06,546][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171215 10:30:06,672][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171215 10:30:08,152][DruidDataSource:638] {dataSource-1} inited
+[WARN ][20171215 10:30:08,154][AbstractApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring/spring-mybatis.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to decrypt.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.service.TestUserDao.main(TestUserDao.java:11)
+Caused by: java.lang.IllegalArgumentException: Failed to decrypt.
+	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:211)
+	at com.alibaba.druid.filter.config.ConfigFilter.init(ConfigFilter.java:123)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:511)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 12 more
+Caused by: javax.crypto.BadPaddingException: Decryption error
+	at sun.security.rsa.RSAPadding.unpadV15(RSAPadding.java:380)
+	at sun.security.rsa.RSAPadding.unpad(RSAPadding.java:291)
+	at com.sun.crypto.provider.RSACipher.doFinal(RSACipher.java:356)
+	at com.sun.crypto.provider.RSACipher.engineDoFinal(RSACipher.java:389)
+	at javax.crypto.Cipher.doFinal(Cipher.java:2165)
+	at com.alibaba.druid.filter.config.ConfigTools.decrypt(ConfigTools.java:147)
+	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:203)
+	... 21 more
+[INFO ][20171215 10:31:29,964][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7de26db8: startup date [Fri Dec 15 10:31:29 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:31:30,008][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:31:30,195][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171215 10:31:30,812][DruidDataSource:638] {dataSource-1} inited
+[WARN ][20171215 10:31:30,814][AbstractApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring/spring-mybatis.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to decrypt.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.service.TestUserDao.main(TestUserDao.java:11)
+Caused by: java.lang.IllegalArgumentException: Failed to decrypt.
+	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:211)
+	at com.alibaba.druid.filter.config.ConfigFilter.init(ConfigFilter.java:123)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:511)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 12 more
+Caused by: javax.crypto.BadPaddingException: Decryption error
+	at sun.security.rsa.RSAPadding.unpadV15(RSAPadding.java:380)
+	at sun.security.rsa.RSAPadding.unpad(RSAPadding.java:291)
+	at com.sun.crypto.provider.RSACipher.doFinal(RSACipher.java:356)
+	at com.sun.crypto.provider.RSACipher.engineDoFinal(RSACipher.java:389)
+	at javax.crypto.Cipher.doFinal(Cipher.java:2165)
+	at com.alibaba.druid.filter.config.ConfigTools.decrypt(ConfigTools.java:147)
+	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:203)
+	... 21 more
+[INFO ][20171215 10:35:20,603][AbstractApplicationContext:510] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7de26db8: startup date [Fri Dec 15 10:35:20 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:35:20,647][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:35:20,818][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171215 10:35:20,953][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171215 10:35:21,432][DruidDataSource:638] {dataSource-1} inited
+[WARN ][20171215 10:35:21,434][AbstractApplicationContext:487] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring/spring-mybatis.xml]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to decrypt.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.service.TestUserDao.main(TestUserDao.java:11)
+Caused by: java.lang.IllegalArgumentException: Failed to decrypt.
+	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:211)
+	at com.alibaba.druid.filter.config.ConfigFilter.init(ConfigFilter.java:123)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:511)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeCustomInitMethod(AbstractAutowireCapableBeanFactory.java:1702)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1641)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	... 12 more
+Caused by: javax.crypto.BadPaddingException: Decryption error
+	at sun.security.rsa.RSAPadding.unpadV15(RSAPadding.java:380)
+	at sun.security.rsa.RSAPadding.unpad(RSAPadding.java:291)
+	at com.sun.crypto.provider.RSACipher.doFinal(RSACipher.java:356)
+	at com.sun.crypto.provider.RSACipher.engineDoFinal(RSACipher.java:389)
+	at javax.crypto.Cipher.doFinal(Cipher.java:2165)
+	at com.alibaba.druid.filter.config.ConfigTools.decrypt(ConfigTools.java:147)
+	at com.alibaba.druid.filter.config.ConfigFilter.decrypt(ConfigFilter.java:203)
+	... 21 more
+[INFO ][20171215 10:56:32,825][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Fri Dec 15 10:56:32 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:56:32,870][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:56:32,968][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171215 10:56:33,216][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171215 10:56:33,790][DruidDataSource:638] {dataSource-1} inited
+[INFO ][20171215 10:59:04,631][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Fri Dec 15 10:59:04 CST 2017]; root of context hierarchy
+[INFO ][20171215 10:59:04,676][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 10:59:04,774][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171215 10:59:05,008][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171215 10:59:05,447][DruidDataSource:638] {dataSource-1} inited
+[INFO ][20171215 14:23:57,949][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@182decdb: startup date [Fri Dec 15 14:23:57 CST 2017]; root of context hierarchy
+[INFO ][20171215 14:23:57,993][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171215 14:23:58,091][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mybatis.xml]
+[INFO ][20171215 14:23:58,326][PropertiesLoaderSupport:172] Loading properties file from class path resource [jdbc.properties]
+[INFO ][20171215 14:23:58,772][DruidDataSource:638] {dataSource-1} inited
