@@ -1,0 +1,287 @@
+[INFO ][20171219 15:16:07,354][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ed17bee: startup date [Tue Dec 19 15:16:07 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:16:07,393][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:16:07,576][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:16:07,599][DefaultListableBeanFactory:821] Overriding bean definition for bean 'consumerSessionAwareMessageListener' with a different definition: replacing [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=singleton; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\work\ssm-distributed-scaffold\ssm-distributed-mqconsumer\target\classes\com\ssm\distributed\mqconsumer\listener\ConsumerSessionAwareMessageListener.class]] with [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/spring-mq.xml]]
+[INFO ][20171219 15:16:07,601][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mail.xml]
+[INFO ][20171219 15:16:07,798][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:16:07,799][PropertiesLoaderSupport:172] Loading properties file from class path resource [mail.properties]
+[WARN ][20171219 15:16:07,846][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumerSessionAwareMessageListener': Unsatisfied dependency expressed through field 'mailService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailSender': Failed to introspect bean class [org.springframework.mail.javamail.JavaMailSenderImpl] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: javax/mail/internet/MimeMessage
+[ERROR][20171219 15:16:07,848][MQConsumer:19] ==>MQ context start error:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumerSessionAwareMessageListener': Unsatisfied dependency expressed through field 'mailService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailSender': Failed to introspect bean class [org.springframework.mail.javamail.JavaMailSenderImpl] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: javax/mail/internet/MimeMessage
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.distributed.mqconsumer.MQConsumer.main(MQConsumer.java:15)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailSender': Failed to introspect bean class [org.springframework.mail.javamail.JavaMailSenderImpl] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: javax/mail/internet/MimeMessage
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 15 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailSender': Failed to introspect bean class [org.springframework.mail.javamail.JavaMailSenderImpl] for lookup method metadata: could not find class that it depends on; nested exception is java.lang.NoClassDefFoundError: javax/mail/internet/MimeMessage
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:269)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1073)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1046)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 28 more
+Caused by: java.lang.NoClassDefFoundError: javax/mail/internet/MimeMessage
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+	at java.lang.Class.getDeclaredMethods(Class.java:1975)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:613)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:524)
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:510)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:247)
+	... 40 more
+Caused by: java.lang.ClassNotFoundException: javax.mail.internet.MimeMessage
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 47 more
+[INFO ][20171219 15:20:51,396][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ed17bee: startup date [Tue Dec 19 15:20:51 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:20:51,434][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:20:51,620][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:20:51,643][DefaultListableBeanFactory:821] Overriding bean definition for bean 'consumerSessionAwareMessageListener' with a different definition: replacing [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=singleton; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\work\ssm-distributed-scaffold\ssm-distributed-mqconsumer\target\classes\com\ssm\distributed\mqconsumer\listener\ConsumerSessionAwareMessageListener.class]] with [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/spring-mq.xml]]
+[INFO ][20171219 15:20:51,645][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mail.xml]
+[INFO ][20171219 15:20:51,770][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:20:51,777][PropertiesLoaderSupport:172] Loading properties file from class path resource [mail.properties]
+[WARN ][20171219 15:20:51,808][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumerSessionAwareMessageListener': Unsatisfied dependency expressed through field 'mailService'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.mail.javamail.MailSender] for bean with name 'mailSender' defined in class path resource [spring/spring-mail.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.mail.javamail.MailSender
+[ERROR][20171219 15:20:51,810][MQConsumer:19] ==>MQ context start error:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumerSessionAwareMessageListener': Unsatisfied dependency expressed through field 'mailService'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.mail.javamail.MailSender] for bean with name 'mailSender' defined in class path resource [spring/spring-mail.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.mail.javamail.MailSender
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.distributed.mqconsumer.MQConsumer.main(MQConsumer.java:15)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.springframework.mail.javamail.MailSender] for bean with name 'mailSender' defined in class path resource [spring/spring-mail.xml]; nested exception is java.lang.ClassNotFoundException: org.springframework.mail.javamail.MailSender
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:639)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1456)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:420)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:398)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:220)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1243)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1094)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: org.springframework.mail.javamail.MailSender
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:250)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:394)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1408)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1353)
+	... 25 more
+[INFO ][20171219 15:23:38,699][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 15:23:38 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:23:38,739][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:23:38,914][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:23:38,940][DefaultListableBeanFactory:821] Overriding bean definition for bean 'consumerSessionAwareMessageListener' with a different definition: replacing [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=singleton; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\work\ssm-distributed-scaffold\ssm-distributed-mqconsumer\target\classes\com\ssm\distributed\mqconsumer\listener\ConsumerSessionAwareMessageListener.class]] with [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/spring-mq.xml]]
+[INFO ][20171219 15:23:38,942][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mail.xml]
+[INFO ][20171219 15:23:39,085][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:23:39,086][PropertiesLoaderSupport:172] Loading properties file from class path resource [mail.properties]
+[WARN ][20171219 15:23:39,126][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumerSessionAwareMessageListener': Unsatisfied dependency expressed through field 'mailService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailSender' defined in class path resource [spring/spring-mail.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.mail.javamail.JavaMailSender]: Specified class is an interface
+[ERROR][20171219 15:23:39,128][MQConsumer:19] ==>MQ context start error:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumerSessionAwareMessageListener': Unsatisfied dependency expressed through field 'mailService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailSender' defined in class path resource [spring/spring-mail.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.mail.javamail.JavaMailSender]: Specified class is an interface
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.distributed.mqconsumer.MQConsumer.main(MQConsumer.java:15)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailSender' defined in class path resource [spring/spring-mail.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.mail.javamail.JavaMailSender]: Specified class is an interface
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 15 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mailSender' defined in class path resource [spring/spring-mail.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.mail.javamail.JavaMailSender]: Specified class is an interface
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1110)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 28 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.mail.javamail.JavaMailSender]: Specified class is an interface
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:68)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1102)
+	... 39 more
+[INFO ][20171219 15:24:17,166][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 15:24:17 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:24:17,208][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:24:17,395][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:24:17,423][DefaultListableBeanFactory:821] Overriding bean definition for bean 'consumerSessionAwareMessageListener' with a different definition: replacing [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=singleton; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\work\ssm-distributed-scaffold\ssm-distributed-mqconsumer\target\classes\com\ssm\distributed\mqconsumer\listener\ConsumerSessionAwareMessageListener.class]] with [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/spring-mq.xml]]
+[INFO ][20171219 15:24:17,426][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mail.xml]
+[INFO ][20171219 15:24:17,574][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:24:17,575][PropertiesLoaderSupport:172] Loading properties file from class path resource [mail.properties]
+[WARN ][20171219 15:24:17,611][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumerSessionAwareMessageListener': Unsatisfied dependency expressed through field 'mailService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSenderImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+[ERROR][20171219 15:24:17,613][MQConsumer:19] ==>MQ context start error:
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'consumerSessionAwareMessageListener': Unsatisfied dependency expressed through field 'mailService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSenderImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:754)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.distributed.mqconsumer.MQConsumer.main(MQConsumer.java:15)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mailService': Unsatisfied dependency expressed through field 'mailSender'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSenderImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:592)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 15 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSenderImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1466)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1097)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1059)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:589)
+	... 28 more
+[INFO ][20171219 15:24:37,014][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 15:24:37 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:24:37,054][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:24:37,232][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:24:37,256][DefaultListableBeanFactory:821] Overriding bean definition for bean 'consumerSessionAwareMessageListener' with a different definition: replacing [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=singleton; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\work\ssm-distributed-scaffold\ssm-distributed-mqconsumer\target\classes\com\ssm\distributed\mqconsumer\listener\ConsumerSessionAwareMessageListener.class]] with [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/spring-mq.xml]]
+[INFO ][20171219 15:24:37,258][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mail.xml]
+[INFO ][20171219 15:24:37,389][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:24:37,390][PropertiesLoaderSupport:172] Loading properties file from class path resource [mail.properties]
+[INFO ][20171219 15:24:37,610][ExecutorConfigurationSupport:165] Initializing ExecutorService  'threadPool'
+[INFO ][20171219 15:24:37,870][DefaultLifecycleProcessor$LifecycleGroup:341] Starting beans in phase 2147483647
+[INFO ][20171219 15:24:38,049][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:handx-51602-1513668277923-1:1,clientId=null,started=false}] }
+[INFO ][20171219 15:24:38,082][DefaultLifecycleProcessor$LifecycleGroup:341] Starting beans in phase 2147483647
+[INFO ][20171219 15:24:38,140][ConsumerSessionAwareMessageListener:36] ==>receive message:{"content":"通过ActiveMQ异步发送邮件！","subject":"ActiveMQ测试","to":"ant_li@qq.com"}
+[INFO ][20171219 15:26:33,290][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 15:26:33 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:26:33,329][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:26:33,508][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:26:33,531][DefaultListableBeanFactory:821] Overriding bean definition for bean 'consumerSessionAwareMessageListener' with a different definition: replacing [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=singleton; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\work\ssm-distributed-scaffold\ssm-distributed-mqconsumer\target\classes\com\ssm\distributed\mqconsumer\listener\ConsumerSessionAwareMessageListener.class]] with [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/spring-mq.xml]]
+[INFO ][20171219 15:26:33,533][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mail.xml]
+[INFO ][20171219 15:26:33,664][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:26:33,665][PropertiesLoaderSupport:172] Loading properties file from class path resource [mail.properties]
+[INFO ][20171219 15:26:33,739][ExecutorConfigurationSupport:165] Initializing ExecutorService  'threadPool'
+[INFO ][20171219 15:26:33,900][DefaultLifecycleProcessor$LifecycleGroup:341] Starting beans in phase 2147483647
+[INFO ][20171219 15:26:34,090][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:handx-51699-1513668393951-1:1,clientId=null,started=false}] }
+[INFO ][20171219 15:26:34,114][DefaultLifecycleProcessor$LifecycleGroup:341] Starting beans in phase 2147483647
+[INFO ][20171219 15:34:43,601][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 15:34:43 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:34:43,641][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:34:43,818][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:34:43,842][DefaultListableBeanFactory:821] Overriding bean definition for bean 'consumerSessionAwareMessageListener' with a different definition: replacing [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=singleton; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\work\ssm-distributed-scaffold\ssm-distributed-mqconsumer\target\classes\com\ssm\distributed\mqconsumer\listener\ConsumerSessionAwareMessageListener.class]] with [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/spring-mq.xml]]
+[INFO ][20171219 15:34:43,941][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:34:43,942][PropertiesLoaderSupport:172] Loading properties file from class path resource [mail.properties]
+[WARN ][20171219 15:34:43,943][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [mail.properties] cannot be opened because it does not exist
+[ERROR][20171219 15:34:43,944][MQConsumer:19] ==>MQ context start error:
+org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [mail.properties] cannot be opened because it does not exist
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:148)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:281)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:686)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:524)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.distributed.mqconsumer.MQConsumer.main(MQConsumer.java:15)
+Caused by: java.io.FileNotFoundException: class path resource [mail.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:172)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:154)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:98)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:175)
+	at org.springframework.core.io.support.PropertiesLoaderSupport.mergeProperties(PropertiesLoaderSupport.java:156)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.postProcessBeanFactory(PropertySourcesPlaceholderConfigurer.java:139)
+	... 7 more
+[INFO ][20171219 15:35:07,385][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 15:35:07 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:35:07,424][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:35:07,608][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:35:07,640][DefaultListableBeanFactory:821] Overriding bean definition for bean 'consumerSessionAwareMessageListener' with a different definition: replacing [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=singleton; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [D:\work\ssm-distributed-scaffold\ssm-distributed-mqconsumer\target\classes\com\ssm\distributed\mqconsumer\listener\ConsumerSessionAwareMessageListener.class]] with [Generic bean: class [com.ssm.distributed.mqconsumer.listener.ConsumerSessionAwareMessageListener]; scope=; abstract=false; lazyInit=false; autowireMode=1; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [spring/spring-mq.xml]]
+[INFO ][20171219 15:35:07,745][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:35:07,943][DefaultLifecycleProcessor$LifecycleGroup:341] Starting beans in phase 2147483647
+[INFO ][20171219 15:35:08,132][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:handx-51948-1513668907996-1:1,clientId=null,started=false}] }
+[INFO ][20171219 15:35:08,160][DefaultLifecycleProcessor$LifecycleGroup:341] Starting beans in phase 2147483647
+[INFO ][20171219 15:35:35,608][ConsumerSessionAwareMessageListener:24] ==>receive message:{"content":"通过ActiveMQ异步发送邮件！","subject":"ActiveMQ测试","to":"ant_li@qq.com"}
+[INFO ][20171219 15:38:58,071][ConsumerSessionAwareMessageListener:24] ==>receive message:{"content":"通过ActiveMQ异步发送邮件！","subject":"ActiveMQ测试","to":"ant_li@qq.com"}

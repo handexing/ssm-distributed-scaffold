@@ -14,16 +14,16 @@
            http://www.springframework.org/schema/context  
            http://www.springframework.org/schema/context/spring-context-4.0.xsd"
 	default-autowire="byName" default-lazy-init="false">
-
+	
 	<!-- 采用注释的方式配置bean -->
 	<context:annotation-config />
 
 	<!-- 配置要扫描的包 -->
-	<context:component-scan base-package="com.ssm.distributed" />
-	
-	<!-- 读入配置属性文件 -->
-	<context:property-placeholder location="classpath:service.properties" />
+	<context:component-scan base-package="com.ssm.distributed.mqproducer" />
 
-	<import resource="classpath:spring/spring-mvc.xml" />
-	<import resource="classpath:spring/dubbo-consumer.xml" />
+	<!-- 读入配置属性文件 -->
+	<context:property-placeholder location="classpath:mq.properties" />
+
+	<import resource="spring-mq.xml" />
+	
 </beans>

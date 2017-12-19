@@ -1,0 +1,59 @@
+[INFO ][20171219 14:56:34,581][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 14:56:34 CST 2017]; root of context hierarchy
+[INFO ][20171219 14:56:34,807][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 14:56:36,096][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 14:56:36,341][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[WARN ][20171219 14:56:36,431][AbstractApplicationContext:550] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+[ERROR][20171219 14:56:36,447][MQProducerTest:32] ==>MQ context start error:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1110)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1054)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:223)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:702)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:527)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.ssm.distributed.mqproducer.MQProducerTest.main(MQProducerTest.java:17)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1102)
+	... 13 more
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.<clinit>(ReflectiveAspectJAdvisorFactory.java:76)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.<init>(AnnotationAwareAspectJAutoProxyCreator.java:53)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Around
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 22 more
+[INFO ][20171219 14:56:59,553][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 14:56:59 CST 2017]; root of context hierarchy
+[INFO ][20171219 14:56:59,594][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 14:56:59,778][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 14:56:59,896][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 14:57:00,704][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:handx-50722-1513666620494-1:1,clientId=null,started=false}] }
+[INFO ][20171219 14:57:01,275][MQProducerTest:35] ===>System.exit
+[INFO ][20171219 15:35:34,756][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 15:35:34 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:35:34,797][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:35:34,978][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:35:35,091][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:35:35,475][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:handx-51957-1513668935341-1:1,clientId=null,started=false}] }
+[INFO ][20171219 15:35:35,602][MQProducerTest:35] ===>System.exit
+[INFO ][20171219 15:38:57,230][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Tue Dec 19 15:38:57 CST 2017]; root of context hierarchy
+[INFO ][20171219 15:38:57,273][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 15:38:57,459][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-mq.xml]
+[INFO ][20171219 15:38:57,573][PropertiesLoaderSupport:172] Loading properties file from class path resource [mq.properties]
+[INFO ][20171219 15:38:57,947][SingleConnectionFactory:311] Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:handx-51998-1513669137829-1:1,clientId=null,started=false}] }
+[INFO ][20171219 15:38:58,076][MQProducerTest:35] ===>System.exit

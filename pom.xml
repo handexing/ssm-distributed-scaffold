@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ssm.distributed</groupId>
@@ -18,6 +17,7 @@
 		<mybatis.version>3.4.2</mybatis.version>
 		<slf4j.version>1.6.6</slf4j.version>
 		<log4j.version>1.2.9</log4j.version>
+		<activemq.version>5.15.2</activemq.version>
 	</properties>
 
 	<dependencies>
@@ -223,6 +223,19 @@
 			<version>0.10</version>
 		</dependency>
 
+		<!-- activemq -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>${activemq.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-pool</artifactId>
+			<version>${activemq.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<modules>
@@ -231,6 +244,8 @@
 		<module>ssm-distributed-web</module>
 		<module>ssm-distributed-common</module>
 		<module>ssm-distributed-common-config</module>
-	</modules>
+    <module>ssm-distributed-mqproducer</module>
+    <module>ssm-distributed-mqconsumer</module>
+  </modules>
 
 </project>
