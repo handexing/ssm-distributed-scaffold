@@ -236,6 +236,19 @@
 			<version>${activemq.version}</version>
 		</dependency>
 
+		<!-- redis -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>2.4.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<modules>
@@ -244,8 +257,9 @@
 		<module>ssm-distributed-web</module>
 		<module>ssm-distributed-common</module>
 		<module>ssm-distributed-common-config</module>
-    <module>ssm-distributed-mqproducer</module>
-    <module>ssm-distributed-mqconsumer</module>
+		<module>ssm-distributed-mqproducer</module>
+		<module>ssm-distributed-mqconsumer</module>
+    <module>ssm-distributed-redis</module>
   </modules>
 
 </project>

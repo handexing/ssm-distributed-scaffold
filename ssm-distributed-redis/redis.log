@@ -1,0 +1,32 @@
+[INFO ][20171219 17:05:07,498][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2aae9190: startup date [Tue Dec 19 17:05:07 CST 2017]; root of context hierarchy
+[INFO ][20171219 17:05:07,540][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 17:05:07,737][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-redis.xml]
+[ERROR][20171219 17:05:09,414][RedisSpringTest:40] ==>RedisSpringTest context start error:
+redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
+	at redis.clients.jedis.Connection.connect(Connection.java:207)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.Connection.sendCommand(Connection.java:126)
+	at redis.clients.jedis.BinaryClient.del(BinaryClient.java:132)
+	at redis.clients.jedis.Client.del(Client.java:74)
+	at redis.clients.jedis.Jedis.del(Jedis.java:196)
+	at redis.clients.jedis.ShardedJedis.del(ShardedJedis.java:252)
+	at com.ssm.distributed.redis.RedisSpringTest.main(RedisSpringTest.java:28)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	... 7 more
+[INFO ][20171219 17:43:23,871][RedisTest:25] wusc=WuShuicheng
+[INFO ][20171219 17:43:23,874][RedisTest:29] wusc=WuShuicheng2
+[INFO ][20171219 17:44:44,789][AbstractApplicationContext:582] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2aae9190: startup date [Tue Dec 19 17:44:44 CST 2017]; root of context hierarchy
+[INFO ][20171219 17:44:44,829][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-context.xml]
+[INFO ][20171219 17:44:45,000][XmlBeanDefinitionReader:317] Loading XML bean definitions from class path resource [spring/spring-redis.xml]
+[INFO ][20171219 17:44:45,281][RedisSpringTest:32] name=handx
+[INFO ][20171219 17:44:45,282][RedisSpringTest:36] name=null
+[INFO ][20171219 17:44:45,283][RedisSpringTest:43] ===>System.exit
